@@ -2,7 +2,6 @@ pipeline {
   agent {
     docker {
       image 'rhlkankane/maven-abhishek-docker-agent:v1'
-      command 'tail -f /dev/null' // This command will keep the container running indefinitely
       args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
